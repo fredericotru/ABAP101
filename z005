@@ -4,14 +4,14 @@ TYPES nome_cliente TYPE c LENGTH 10.
 
 DATA num_empreg TYPE i.
 
-TYPES number_of_unpaid_invoices TYPE n LENGTH 7.
+TYPES numero_matricula TYPE n LENGTH 8.
 TYPES creation_date TYPE d.
-TYPES last_changed_at TYPE t.
+TYPES last_changed TYPE t.
 
 TYPES: BEGIN OF customer_structure,
   name TYPE nome_cliente,
   n_employees LIKE num_empreg,
-  unpaid_invoices TYPE number_of_unpaid_invoices,
+  matricula_fun TYPE numero_matricula,
   creation_date TYPE d,
-  last_changed_at TYPE t,
+  last_changed TYPE t,
 END OF customer_structure.

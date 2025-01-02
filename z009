@@ -1,0 +1,9 @@
+REPORT z_ex009_frederico.
+
+TYPES: BEGIN OF bookingstructure,
+         carrid   TYPE sbook-carrid,
+         connid   TYPE sbook-connid,
+         fldate   TYPE sbook-fldate,
+         bookid   TYPE sbook-bookid,
+         customid TYPE sbook-customid,
+       END OF bookingstructure.

@@ -1,0 +1,32 @@
+REPORT z_ex010_frederico.
+
+TYPES: BEGIN OF bookingstructure,
+         carrid   TYPE sbook-carrid,
+         connid   TYPE sbook-connid,
+         fldate   TYPE sbook-fldate,
+         bookid   TYPE sbook-bookid,
+         customid TYPE sbook-customid,
+       END OF bookingstructure.
+
+TYPES: BEGIN OF componentes_sflight,
+         carrid        TYPE sflight-carrid,
+         connid        TYPE sflight-connid,
+         fldate        TYPE sflight-fldate,
+         currency      TYPE sflight-currency,
+         price         TYPE sflight-price,
+         planetype     TYPE sflight-planetype,
+         seatsmax      TYPE sflight-seatsmax,
+         seatsoccupied TYPE sflight-seatsocc,
+       END OF componentes_sflight.
+
+
+TYPES: BEGIN OF sflightbookingstructure.
+  INCLUDE TYPE componentes_sflight.
+  INCLUDE TYPE bookingstructure as book RENAMING WITH SUFFIX _book.
+TYPES END OF sflightbookingstructure.
+
+START-OF-SELECTION.
+
+DATA ONERECORD TYPE SFLIGHTBOOKINGSTRUCTURE.
+
+BREAK-POINT.

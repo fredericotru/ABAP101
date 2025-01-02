@@ -1,0 +1,22 @@
+REPORT Z_EX007_FREDERICO.
+
+TYPES EXERCICIO_SFLIGHT TYPE SFLIGHT.
+
+\\SFLIGHT É UMA TABELA, SE CLICAR 2X NELA EXIBE A TABELA 
+
+EXERCISE 8 
+
+TYPES: BEGIN OF componentes_sflight,
+carrid TYPE sflight-carrid,
+connid TYPE sflight-connid,
+fldate TYPE sflight-fldate,
+currency TYPE sflight-currency,
+price TYPE sflight-price,
+planetype TYPE sflight-planetype,
+seatsmax TYPE sflight-seatsmax,
+seatsoccupied TYPE sflight-seatsocc,
+END OF componentes_sflight.
+
+\\USANDO "TYPES:" COM OS DOIS PONTOS, VOCÊ NÃO PRECISA ESCREVER TYPES VARIAS VEZES
+
+

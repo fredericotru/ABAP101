@@ -1,1 +1,16 @@
+REPORT z_ex006_frederico.
+
+TYPES nome_cliente TYPE c LENGTH 10.
+DATA registro_cliente TYPE i.
+TYPES cel_cliente TYPE n LENGTH 7.
+TYPES hora_modificacao TYPE t.
+TYPES data_criacao TYPE d.
+
+TYPES: BEGIN OF cadastro_cliente,
+  name TYPE nome_cliente,
+  codigo_cliente TYPE i,
+  contato TYPE cel_cliente,
+  horas TYPE hora_modificacao,
+  data TYPE data_criacao,
+END OF cadastro_cliente.
 

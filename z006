@@ -14,3 +14,6 @@ TYPES: BEGIN OF cadastro_cliente,
   data TYPE data_criacao,
 END OF cadastro_cliente.
 
+
+// ERREI AO COLOCAR NO "END OF CADASTRO_CLIENTE"
+// COLOCAR OS CAMPOS IGUAL AOS VARIAVEIS

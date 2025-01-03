@@ -1,0 +1,23 @@
+REPORT z_ex012_frederico.
+
+TYPES tabela_type_sflight TYPE TABLE OF sflight.
+
+DATA sflight_work_area TYPE LINE OF tabela_type_sflight.
+
+DATA tabela_sflight TYPE tabela_type_sflight.
+
+START-OF-SELECTION.
+
+  sflight_work_area-carrid = 'aa'.
+  sflight_work_area-connid = '0017'.
+  sflight_work_area-fldate = 20250103.
+  sflight_work_area-price = '500.12'.
+
+  APPEND sflight_work_area TO tabela_sflight.
+
+  sflight_work_area-carrid = 'aa'.
+  sflight_work_area-connid = '0017'.
+  sflight_work_area-fldate = 20250103.
+  sflight_work_area-price = '500.12'.
+
+  APPEND sflight_work_area TO tabela_sflight.

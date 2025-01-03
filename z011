@@ -1,0 +1,20 @@
+REPORT z_ex011_frederico.
+
+TYPES table_int TYPE TABLE OF i.
+
+DATA impares TYPE table_int.
+DATA pares TYPE table_int.
+
+START-OF-SELECTION.
+
+APPEND: 1 TO impares,
+3 TO impares,
+5 TO impares,
+7 TO impares,
+9 TO impares.
+
+  APPEND: 2 TO pares,
+  4 TO pares,
+  6 TO pares,
+  8 TO pares,
+  10 TO pares.

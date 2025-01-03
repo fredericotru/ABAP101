@@ -1,0 +1,14 @@
+REPORT z_ex013_frederico.
+
+TYPES: BEGIN OF componentes_sflight,
+         carrid        TYPE sflight-carrid,
+         connid        TYPE sflight-connid,
+         fldate        TYPE sflight-fldate,
+         currency      TYPE sflight-currency,
+         price         TYPE sflight-price,
+         planetype     TYPE sflight-planetype,
+         seatsmax      TYPE sflight-seatsmax,
+         seatsoccupied TYPE sflight-seatsocc,
+       END OF componentes_sflight.
+
+TYPES listacurta_componentes_sflight TYPE TABLE OF componentes_sflight WITH KEY carrid connid fldate currency.

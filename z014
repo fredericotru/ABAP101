@@ -1,0 +1,11 @@
+REPORT z_ex014_frederico.
+
+TYPES: BEGIN OF flight_booking,
+         carrid   TYPE sbook-carrid,
+         connid   TYPE sbook-connid,
+         fldate   TYPE sbook-fldate,
+         bookid   TYPE sbook-bookid,
+         customid TYPE sbook-customid,
+       END OF flight_booking .
+
+TYPES tabela_booking TYPE TABLE OF flight_booking WITH KEY carrid connid fldate bookid customid.

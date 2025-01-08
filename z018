@@ -1,0 +1,5 @@
+REPORT Z_EX018_FREDERICO.
+
+DATA INT TYPE i VALUE '12.72'.
+
+WRITE 'valor_redondo'.

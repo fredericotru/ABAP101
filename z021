@@ -1,0 +1,5 @@
+REPORT Z_EX022_FREDERICO.
+
+DATA air_line TYPE splfi-carrid.
+
+**sempre colocar a tabela primeiro 

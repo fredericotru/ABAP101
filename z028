@@ -1,0 +1,3 @@
+REPORT z_ex028_frederico.
+
+DATA table_teste TYPE STANDARD TABLE OF scarr.

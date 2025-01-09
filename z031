@@ -1,0 +1,3 @@
+REPORT z_ex031_frederico.
+
+CONSTANTS nome_completo TYPE string VALUE'FREDERICO CARVALHO TRUOCCHIO'.

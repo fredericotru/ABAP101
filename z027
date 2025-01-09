@@ -1,0 +1,14 @@
+REPORT z_ex027_frederico.
+**Declare an internal table with fields of the table SBOOK CARRID, CONNID, FLDATE,
+**BOOKID, CUSTOMID
+
+DATA: BEGIN OF tabela_interna OCCURS 0,
+        carrid   TYPE sbook-carrid,
+        connid   TYPE sbook-connid,
+        fldate   TYPE sbook-fldate,
+        bookid   TYPE sbook-bookid,
+        customid TYPE sbook-customid,
+      END OF tabela_interna.
+
+TYPES tabela_interna1 TYPE TABLE OF tabela_interna WITH KEY carrid connid fldate bookid costomid.
+DATA tabela_interna TYPE tabela_interna1.

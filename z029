@@ -1,1 +1,5 @@
+REPORT z_ex029_frederico.
 
+TYPES ty_spfli TYPE spfli.
+
+DATA all_spfli TYPE TABLE OF ty_spfli.

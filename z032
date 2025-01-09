@@ -1,0 +1,4 @@
+REPORT z_ex032_frederico.
+
+CONSTANTS: c_true  TYPE c VALUE 'X',
+           c_false TYPE c VALUE space.

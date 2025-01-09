@@ -1,0 +1,12 @@
+REPORT z_ex030_frederico.
+
+TYPES: BEGIN OF TABELA_SCARRcUSTOM,
+         carrid    TYPE scarr-carrid,
+         carrname  TYPE scarr-carrname,
+         currcode  TYPE scarr-currcode,
+         url       TYPE scarr-url,
+         telephone TYPE scustom-telephone,
+
+       END OF tabela_scarrcustom.
+
+DATA: tabela_teste TYPE TABLE  OF tabela_scarrcustom.

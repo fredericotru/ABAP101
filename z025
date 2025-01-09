@@ -1,0 +1,11 @@
+REPORT z_ex025_frederico.
+DATA: BEGIN OF componentes_sflight,
+        carrid    TYPE sflight-carrid,
+        connid    TYPE sflight-connid,
+        fldate    TYPE sflight-fldate,
+        price     TYPE sflight-price,
+        currency  TYPE sflight-currency,
+        planetype TYPE sflight-planetype,
+        seatsmax  TYPE sflight-seatsmax,
+        seatsocc  TYPE sflight-seatsocc,
+      END OF componentes_sflight.

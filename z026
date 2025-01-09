@@ -1,0 +1,6 @@
+REPORT z_ex026_frederico.
+
+DATA: BEGIN OF sbook_nova.
+        INCLUDE STRUCTURE sbook.
+DATA phone TYPE scustom-telephone.
+DATA END OF sbook_nova.

@@ -1,0 +1,7 @@
+REPORT z_ex034_frederico.
+
+CONSTANTS: BEGIN OF group_constant,
+             const_1 TYPE i VALUE 1,
+             const_2 TYPE i VALUE 2,
+             const_3 TYPE i VALUE 3,
+           END OF group_constants.

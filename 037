@@ -1,0 +1,4 @@
+REPORT z_ex037_frederico.
+
+CONSTANTS c_ab TYPE c VALUE'A'.
+CONSTANTS c_c LIKE ab VALUE'b'.

@@ -1,1 +1,6 @@
-
+CONSTANTS: BEGIN OF constants_prim,
+  char TYPE c LENGTH 9 VALUE'FREDERICO',
+  int TYPE i value 3,
+  date TYPE d value '20250114',
+  string TYPE string value 'teste',
+  END OF constants_prim.

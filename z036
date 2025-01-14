@@ -1,0 +1,7 @@
+REPORT z_ex036_frederico.
+
+TYPE-POOLS: abap, icon.
+
+CONSTANTS icon_verde LIKE icon_green_light VALUE'@08@'.
+
+DATA abap_false TYPE abap_bool.

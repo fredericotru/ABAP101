@@ -1,0 +1,7 @@
+REPORT z_ex40_frederico.
+
+DATA resultado TYPE i.
+
+resultado = 2 + 3 * 5.
+
+WRITE resultado.

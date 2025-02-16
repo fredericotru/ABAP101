@@ -1,0 +1,42 @@
+*& Report Z_EX41_FREDERICO
+*&---------------------------------------------------------------------*
+*&Write an executable program that get two integers inside variables and perform the addition,
+*&subtraction, multiplication, division and power between them.
+*&---------------------------------------------------------------------*
+REPORT z_ex41_frederico.
+
+DATA: num_a   TYPE i,
+      num_b   TYPE i,
+      results TYPE f.
+
+PARAMETERS: p_numA       TYPE i,
+            p_numB       TYPE i,
+            p_oper  TYPE c LENGTH 1.
+
+START-OF-SELECTION.
+  num_a = p_numA.
+  num_b = p_numB.
+
+  CASE p_oper.
+    WHEN 'A'. " ADDITION
+      results = num_a + num_b.
+      WRITE: results.
+    WHEN 'S'. " SUBTRACTION
+      results = num_a - num_b.
+      WRITE: results.
+    WHEN 'M'. " MULTIPLICATION
+      results = num_a * num_b.
+      WRITE: results.
+    WHEN 'D'. " DIVISION
+      IF num_b <> 0.
+        results = num_a / num_b.
+        WRITE: results.
+      ELSE.
+        WRITE: 'DIVISION BY ZERO IS NOT ALLOWED'.
+      ENDIF.
+    WHEN 'P'. " POWER
+      results = num_a ** num_b.
+      WRITE: results.
+    WHEN OTHERS.
+      WRITE: 'INVALID OPERATION. CHOOSE A, S, M, D, OR P'.
+  ENDCASE.

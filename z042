@@ -1,1 +1,28 @@
 
+*&---------------------------------------------------------------------*
+*& Report Z_EX42_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT Z_EX42_FREDERICO.
+
+PARAMETERS: num_a type i,
+num_b like num_a default 2.
+DATA RESULTS TYPE i.
+
+START-OF-SELECTION.
+
+results = num_a + num_b.
+WRITE:/ 'addition',results.
+
+results = num_a - num_b.
+write:/ 'subtraction', results.
+
+results = num_a * num_b.
+write:/ 'multiplication', results.
+
+results = num_a / num_b.
+write:/ 'division', results.
+
+results = num_a ** num_b.
+write:/ 'power', results.

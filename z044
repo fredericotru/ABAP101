@@ -1,0 +1,14 @@
+REPORT z_ex44_frederico.
+
+DATA: lettera TYPE string,
+      letterb TYPE string,
+      result  TYPE string.
+
+START-OF-SELECTION.
+
+  lettera = 'hello'.
+  letterb = 'world'.
+
+  result = lettera && letterb.
+
+  WRITE result.

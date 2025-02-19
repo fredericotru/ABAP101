@@ -1,0 +1,16 @@
+REPORT Z_EX50_FREDERICO.
+
+DATA contador TYPE i.
+
+START-OF-SELECTION.
+
+contador = 0.
+
+WHILE contador < 100.
+  IF contador MOD 8 = 0.
+    WRITE: / contador, 'this num can be divided by eight'.
+  ELSE.
+    WRITE: / contador.
+  ENDIF.
+  contador = contador + 1.
+ENDWHILE.

@@ -1,0 +1,36 @@
+*&---------------------------------------------------------------------*
+*& Report Z_EX45_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_ex45_frederico.
+
+DATA: word_a TYPE string VALUE 'FRED',
+      word_b TYPE string VALUE 'TRUOCCHIO',
+      word_c TYPE string VALUE '-',
+      month  TYPE string,
+      result TYPE string.
+
+month = sy-datum+4(02).
+
+CASE month.
+  WHEN '01'. WRITE 'JANEIRO'.
+  WHEN '02'. WRITE 'FEV'.
+  WHEN '03'. WRITE 'MAR'.
+  WHEN '04'. WRITE 'ABRIL'.
+  WHEN '05'. WRITE 'MAIO'.
+  WHEN '06'. WRITE 'JUN'.
+  WHEN '07'. WRITE 'JUL'.
+  WHEN '08'. WRITE 'AGO'.
+  WHEN '09'. WRITE 'SET'.
+  WHEN '10'. WRITE 'OUT'.
+  WHEN '11'. WRITE 'NOV'.
+  WHEN '12'. WRITE 'DEC'.
+
+ENDCASE.
+
+
+
+result = word_a && word_c && word_b && word_c && month.
+
+WRITE result.

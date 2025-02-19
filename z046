@@ -1,0 +1,37 @@
+*& Report Z_EX46_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_ex46_frederico.
+
+DATA: day    TYPE d,
+      hifen  TYPE string VALUE 'de',
+      month  TYPE string,
+      year   TYPE string,
+      result TYPE string.
+
+month = sy-datum+4(2).
+
+CASE month.
+  WHEN '01'. month = 'JANEIRO'.
+  WHEN '02'. month = 'FEVEREIRO'.
+  WHEN '03'. month = 'MARÇO'.
+  WHEN '04'. month = 'ABRIL'.
+  WHEN '05'. month = 'MAIO'.
+  WHEN '06'. month = 'JUNHO'.
+  WHEN '07'. month = 'JULHO'.
+  WHEN '08'. month = 'AGOSTO'.
+  WHEN '09'. month = 'SETEMBRO'.
+  WHEN '10'. month = 'OUTUBRO'.
+  WHEN '11'. month = 'NOVEMBRO'.
+  WHEN '12'. month = 'DECEMBRO'.
+ENDCASE.
+
+day = sy-datum+6(2).
+
+year = sy-datum+0(4).
+
+result = day && hifen && month && hifen && year.
+
+
+WRITE result.

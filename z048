@@ -1,0 +1,15 @@
+*&---------------------------------------------------------------------*
+*& Report Z_EX48_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_ex48_frederico.
+
+DATA: vowels_count TYPE i,
+      user         TYPE c LENGTH 40 VALUE 'frederico'.
+
+TRANSLATE user TO UPPER CASE.
+
+FIND ALL OCCURRENCES OF REGEX 'A|E|I|O|U' IN user MATCH COUNT vowels_count.
+
+WRITE: / 'The number of vowels in the name', user, 'is:', vowels_count.

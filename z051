@@ -1,0 +1,14 @@
+REPORT Z_EX51_FREDERICO.
+
+DATA: lt_usr04 TYPE TABLE OF usr04,
+      ls_usr04 TYPE usr04.
+
+START-OF-SELECTION.
+
+
+SELECT * FROM usr04 INTO TABLE lt_usr04.
+
+
+LOOP AT lt_usr04 INTO ls_usr04.
+  WRITE: / ls_usr04-bname.
+ENDLOOP.

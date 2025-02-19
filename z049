@@ -1,0 +1,12 @@
+REPORT Z_EX49_FREDERICO.
+
+DATA: v_name TYPE string VALUE 'FredericoCarvalhoTruocchio',
+      v_tam  TYPE i.
+
+v_tam = strlen( v_name ).
+
+IF v_tam > 20.
+  WRITE 'Too big'.
+ELSE.
+  WRITE 'its ok'.
+ENDIF.

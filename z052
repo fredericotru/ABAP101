@@ -1,1 +1,54 @@
+REPORT z_ex52_frederico.
 
+DATA: num1 TYPE i VALUE 1,
+      num2 TYPE i VALUE 2,
+      num3 TYPE i VALUE 3,
+      num4 TYPE i VALUE 4.
+
+WRITE: 'Olhe os números antes do uso dos FORMs:',
+       / num1,
+       / num2,
+       / num3,
+       / num4.
+
+FORM mudar_numeros USING    num1 TYPE i
+                   VALUE(num2) TYPE i
+                   CHANGING num3 TYPE i
+                            VALUE(num4) TYPE i.
+  WRITE: / 'Inside FORM.',
+         / 'num1: ', num1,
+         / 'num2: ', num2,
+         / 'num3: ', num3,
+         / 'num4: ', num4.
+
+  num1 = num1 + 10.
+  num2 = num2 + 10.
+  num3 = num3 + 10.
+  num4 = num4 + 10.
+
+  WRITE: / 'Inside FORM, after update local variables',
+         / 'num1: ', num1,
+         / 'num2: ', num2,
+         / 'num3: ', num3,
+         / 'num4: ', num4.
+ENDFORM.
+
+START-OF-SELECTION.
+  WRITE: / 'Before FORM',
+         / 'num1: ', num1,
+         / 'num2: ', num2,
+         / 'num3: ', num3,
+         / 'num4: ', num4.
+
+  PERFORM mudar_numeros USING    num1
+          num2
+
+                       CHANGING num3
+                         num4.
+
+
+  WRITE: / 'After FORM',
+         / 'num1: ', num1,
+         / 'num2: ', num2,
+         / 'num3: ', num3,
+         / 'num4: ', num4.

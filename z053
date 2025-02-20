@@ -1,0 +1,23 @@
+REPORT z_ex53_frederico.
+
+DATA: num1 TYPE i,
+      num2 TYPE i.
+
+PARAMETERS: num11 TYPE i,
+            num12 TYPE i.
+
+START-OF-SELECTION.
+  num1 = num11.
+  num2 = num12.
+
+  PERFORM medida_1.
+
+FORM medida_1.
+  IF num1 > num2.
+    WRITE: 'Biggest number:', num1.
+  ELSEIF num1 = num2.
+    WRITE: 'They are the same'.
+  ELSE.
+    WRITE: 'Biggest number:', num2.
+  ENDIF.
+ENDFORM.

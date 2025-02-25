@@ -1,0 +1,30 @@
+REPORT z_ex55_frederico.
+
+DATA: num1      TYPE i,
+      num2      TYPE i,
+      result    TYPE f.
+
+PARAMETERS: p_num1 TYPE i,
+            p_num2 TYPE i.
+
+START-OF-SELECTION.
+  num1 = p_num1.
+  num2 = p_num2.
+
+  PERFORM maior_ou_menor USING num1 num2 CHANGING result.
+
+  WRITE: / 'Result:', result.
+
+FORM maior_ou_menor USING p_num1 TYPE i
+                          p_num2 TYPE i
+                    CHANGING p_result TYPE f.
+  IF p_num1 <> p_num2.
+    IF p_num1 > p_num2.
+      p_result = p_num1 / p_num2.
+    ELSE.
+      p_result = p_num2 / p_num1.
+    ENDIF.
+  ELSE.
+    p_result = p_num1 ** 2.
+  ENDIF.
+ENDFORM.

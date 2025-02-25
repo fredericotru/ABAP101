@@ -1,0 +1,26 @@
+REPORT z_ex54_frederico.
+
+DATA: num1     TYPE i,
+      num2     TYPE i,
+      flag_num TYPE c LENGTH 1.
+
+PARAMETERS: p_num1 TYPE i,
+            p_num2 TYPE i.
+
+START-OF-SELECTION.
+  num1 = p_num1.
+  num2 = p_num2.
+
+  PERFORM igual_ou_nao USING num1 num2 CHANGING flag_num.
+
+  WRITE: / 'Flag:', flag_num.
+
+FORM igual_ou_nao USING p_num1 TYPE i
+                        p_num2 TYPE i
+                  CHANGING p_flag TYPE c LENGTH 1.
+  IF p_num1 EQ p_num2.
+    p_flag = 'X'.
+  ELSE.
+    p_flag = ' '.
+  ENDIF.
+ENDFORM.

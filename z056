@@ -1,0 +1,24 @@
+*&---------------------------------------------------------------------*
+*& Report Z_EX56_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_ex56_frederico.
+
+DATA d LIKE sy-datlo.
+
+
+START-OF-SELECTION.
+
+  PERFORM duaslinhas.
+  WRITE d.
+  PERFORM duaslinhas.
+  WRITE d.
+
+FORM duaslinhas.
+
+  DO 2 TIMES.
+    ULINE.
+
+  ENDDO.
+ENDFORM.

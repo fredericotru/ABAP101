@@ -1,0 +1,59 @@
+*&---------------------------------------------------------------------*
+*& Report Z_EX57_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_ex57_frederico.
+
+TYPES: BEGIN OF ty_work_area,
+         str     TYPE string,
+         date    TYPE d,
+         time    TYPE t,
+         integer TYPE i,
+       END OF ty_work_area.
+
+DATA workarea TYPE ty_work_area.
+*&---------------------------------------------------------------------*
+*& Form countdown_initials
+*&---------------------------------------------------------------------*
+* Gets a work area, counts how many components are initial and the write the results
+*----------------------------------------------------------------------*
+* -->US_WORKAREA work area
+
+FORM countdown_initials USING us_workarea TYPE ty_work_area.
+  DATA lv_countdown TYPE i.
+
+  lv_countdown = 0.
+
+  IF us_workarea-str IS INITIAL.
+    lv_countdown = lv_countdown + 1.
+  ENDIF.
+  IF us_workarea-date IS INITIAL.
+    lv_countdown = lv_countdown + 1.
+  ENDIF.
+  IF us_workarea-time IS INITIAL.
+    lv_countdown = lv_countdown + 1.
+  ENDIF.
+  IF us_workarea-integer IS INITIAL.
+    lv_countdown = lv_countdown + 1.
+  ENDIF.
+
+  WRITE: 'lv_countdown:',lv_countdown.
+
+ENDFORM.
+
+START-OF-SELECTION.
+
+PERFORM countdown_initials USING workarea.
+workarea-str ='string'.
+
+PERFORM countdown_initials USING workarea.
+workarea-date ='20251225'.
+
+PERFORM countdown_initials USING workarea.
+workarea-time = '100000'.
+
+PERFORM countdown_initials USING workarea.
+workarea-integer = 1.
+
+PERFORM countdown_initials USING workarea.

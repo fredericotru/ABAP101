@@ -1,0 +1,38 @@
+*&---------------------------------------------------------------------*
+*& Report Z_EX58_FREDERICO
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_ex58_frederico.
+
+TYPES: BEGIN OF ty_work_area,
+         num_int       TYPE i,
+         num_component TYPE p DECIMALS 2,
+         num_packed    TYPE p DECIMALS 2,
+         num_num       TYPE n LENGTH 10,
+       END OF ty_work_area.
+
+DATA: work_area TYPE ty_work_area,
+      sum       TYPE p DECIMALS 2.
+
+PARAMETERS: p_int    TYPE i,
+            p_dec    TYPE p DECIMALS 2,
+            p_packed TYPE p DECIMALS 2,
+            p_num    TYPE n LENGTH 10.
+
+START-OF-SELECTION.
+  PERFORM sum_num USING p_int p_dec p_packed p_num.
+
+FORM sum_num USING int dec packed num.
+  work_area-num_int = int.
+  work_area-num_component = dec.
+  work_area-num_packed = packed.
+  work_area-num_num = num.
+
+  sum = work_area-num_int +
+        work_area-num_component +
+        work_area-num_packed +
+        work_area-num_num.
+
+  WRITE: / 'Sum of all components:', sum.
+ENDFORM.
